@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <project basedir="." default="build" name="DCP-bridge">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="DCP-bridge.classpath">
+        <pathelement location="bin/classes"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin/classes"/>
+        <copy includeemptydirs="false" todir="bin/classes">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-project" name="build"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <exclude name="nya/miku/dcpbridge/android/**"/>
+            <classpath refid="DCP-bridge.classpath"/>
+        </javac>
+        <jar destfile="bin/dcpbridge.jar">
+            <fileset dir="bin/classes"/>
+            <manifest>
+                <attribute name="Main-Class" value="nya.miku.dcpbridge.Launcher"/>
+            </manifest>
+        </jar>
+    </target>
+</project>

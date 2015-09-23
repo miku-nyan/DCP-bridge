@@ -1,0 +1,32 @@
+<!--  
+Data Compression Proxy bridge for Overchan
+Copyright (C) 2014-2015  miku-nyan <https://github.com/miku-nyan>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">DCP-bridge</string>
+    <string name="help_html"><![CDATA[
+        <h3>DCP-bridge for <a href="http://miku-nyan.github.io/Overchan-Android">Overchan</a></h3>
+        <p>The local proxy server sends all HTTP traffic through Google Data Compression Proxy server</p>
+    ]]></string>
+    <string name="config_port">Port</string>
+    <string name="config_https">Use HTTPS during connection to Data Compression Proxy server</string>
+    <string name="config_replaceaccept">Replace \'Accept\' HTTP-header and request images in webp format</string>
+    <string name="button_on">Turn on</string>
+    <string name="button_off">Turn off</string>
+    <string name="notification_title">Proxy is running</string>
+    <string name="notification_content_port">Listening on port %d</string>
+</resources>
