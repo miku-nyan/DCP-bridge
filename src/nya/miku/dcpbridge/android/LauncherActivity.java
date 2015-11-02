@@ -40,7 +40,7 @@ public class LauncherActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.launcher_activity);
-        ((WebView) findViewById(R.id.help_view)).loadData(getString(R.string.help_html), "text/html", "UTF-8");
+        ((WebView) findViewById(R.id.help_view)).loadData(getString(R.string.help_html), "text/html; charset=UTF-8", "UTF-8");
         final EditText portField = (EditText) findViewById(R.id.port_field);
         final CheckBox httpsChkbox = (CheckBox) findViewById(R.id.https_chkbox);
         final CheckBox replaceAcceptChkbox = (CheckBox) findViewById(R.id.replace_chkbox);
