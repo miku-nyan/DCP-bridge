@@ -83,7 +83,7 @@ public abstract class DCPHandler {
         return new DCPHandler() {
             @Override
             public void handleRequest(Request request) {
-                handleRequest(request, false);
+                DCPHandler.handleRequest(request, false);
             }
         };
     }
@@ -92,7 +92,7 @@ public abstract class DCPHandler {
         return new DCPHandler() {
             @Override
             public void handleRequest(Request request) {
-                handleRequest(request, true);
+                DCPHandler.handleRequest(request, true);
             }
         };
     }
